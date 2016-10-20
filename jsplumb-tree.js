@@ -129,8 +129,13 @@ $.jsPlumbTree = function(_jsPlumb, options) {
         else {
             // calculate new vertical offset
             var newTop = parseFloat(node.css('top')) + node.outerHeight() + options.vSpace;
-            if (newTop > this._offsetTop)
-                this._offsetTop = newTop;
+            var newTopParent = 0;
+            var parent = this.nodeById(node.data('parent'));
+            if (parent)
+                newTopParent = parseFloat(parent.css('top')) + parent.outerHeight() + options.vSpace;
+            // the parent could be bigger than the sum of all its children
+            if (newTop > this._offsetTop || newTopParent > this._offsetTop)
+                this._offsetTop = Math.max(newTop, newTopParent);
         }
     };
 
