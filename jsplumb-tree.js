@@ -6,7 +6,7 @@
  * Version: 1.0
  *
  * Author: Daniele Ricci
- * Web: http://gitorious.org/jsplumb-tree/mainline
+ * Web: https://github.com/daniele-athome/jsPlumbTree
  *
  * Licensed under
  *   GPL v3 http://opensource.org/licenses/GPL-3.0
