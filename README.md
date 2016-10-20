@@ -12,7 +12,7 @@ Usage
 
 Initialization should be done in the jsPlumb ready callback:
 
-```
+```javascript
 jsPlumb.ready(function() {
     // get an instance of jsPlumb first
     var pdef = {
