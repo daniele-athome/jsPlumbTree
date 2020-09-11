@@ -230,7 +230,8 @@ $.jsPlumbTree = function(_jsPlumb, options) {
         // we are about to do a lot of work - so disable drawing
         this.jsPlumb.setSuspendDrawing(true);
 
-        this._traverseBranch(this.nodeById(0), options.baseLeft, options.baseTop, false);
+        this.jsPlumb.deleteEveryEndpoint();
+        this._traverseBranch(this.nodeById(0), options.baseLeft, options.baseTop, true);
 
         // resume drawing
         // the second parameter makes jsPlumb trigger a complete redraw
