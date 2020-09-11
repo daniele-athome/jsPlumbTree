@@ -230,7 +230,6 @@ $.jsPlumbTree = function(_jsPlumb, options) {
         // we are about to do a lot of work - so disable drawing
         this.jsPlumb.setSuspendDrawing(true);
 
-        this.jsPlumb.deleteEveryEndpoint();
         this._traverseBranch(this.nodeById(0), options.baseLeft, options.baseTop, false);
 
         // resume drawing
